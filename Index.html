@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Onyeka is the Best!</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(270deg, #ff7eb3, #65d6ce, #fce38a, #f38181);
+      background-size: 800% 800%;
+      animation: gradientMove 10s ease infinite;
+      color: white;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 50px;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff0080; }
+      to { text-shadow: 0 0 20px #fff, 0 0 40px #00ffff; }
+    }
+
+    button {
+      background-color: #00b894;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00b894;
+    }
+
+    button:hover {
+      background-color: #019874;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00b894;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="message">Click the button below 👇</h1>
+  <button onclick="sayMessage()">Click Me!</button>
+
+  <script>
+    function sayMessage() {
+      const msg = document.getElementById('message');
+      msg.innerHTML = '🔥 Onyeka is the Best! 🔥';
+    }
+  </script>
+</body>
+</html>
